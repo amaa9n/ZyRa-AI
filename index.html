@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZyRa AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>ZyRa AI</h1>
+      <div id="login-container">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button id="login-btn">Login</button>
+        <button id="logout-btn" style="display:none;">Logout</button>
+      </div>
+    </header>
+
+    <main>
+      <div id="model-select">
+        <label><input type="checkbox" value="gpt-4"> GPT-4</label>
+        <label><input type="checkbox" value="claude"> Claude</label>
+        <label><input type="checkbox" value="gemini"> Gemini</label>
+      </div>
+
+      <div id="chat-box"></div>
+
+      <div id="input-container">
+        <input type="text" id="message-input" placeholder="Type your message...">
+        <input type="file" id="file-input">
+        <button id="send-btn">Send</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-storage-compat.js"></script>
+  
+  <script src="script.js"></script>
+</body>
+</html>

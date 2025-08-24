@@ -1,0 +1,48 @@
+/* Reset & basics */
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', sans-serif; }
+body { background: linear-gradient(135deg,#0f0c29,#302b63,#24243e); color:#fff; overflow-x:hidden; }
+
+/* Header */
+header {
+  padding: 20px; text-align:center; background: rgba(0,0,0,0.6); position: sticky; top:0; z-index:10;
+  backdrop-filter: blur(10px);
+}
+header h1 { font-size:2em; letter-spacing:2px; text-shadow: 0 0 10px #00f; }
+
+/* Login container */
+#login-container { margin-top:10px; }
+#login-container input, #login-container button { margin: 5px; padding:8px; border:none; border-radius:5px; }
+#login-container button { cursor:pointer; background:#00f; color:#fff; transition:0.3s; }
+#login-container button:hover { background:#0ff; color:#000; }
+
+/* Model selection */
+#model-select { padding:10px; text-align:center; }
+#model-select label { margin-right:15px; cursor:pointer; transition:0.3s; }
+#model-select input[type="checkbox"] { transform:scale(1.3); margin-right:5px; }
+
+/* Chat box */
+#chat-box {
+  height:60vh; overflow-y:auto; margin:20px; padding:10px;
+  background: rgba(255,255,255,0.05); border-radius:15px; backdrop-filter: blur(5px);
+  scroll-behavior:smooth;
+}
+.chat-user { text-align:right; margin:10px; }
+.chat-ai { text-align:left; margin:10px; }
+
+/* Input container */
+#input-container {
+  display:flex; justify-content:center; align-items:center; padding:10px; position:sticky; bottom:0;
+  background: rgba(0,0,0,0.6); backdrop-filter: blur(10px);
+}
+#input-container input[type="text"] { flex:1; padding:10px; border-radius:8px; border:none; margin-right:5px; }
+#input-container input[type="file"] { margin-right:5px; }
+#input-container button { padding:10px 15px; border:none; border-radius:8px; background:#00f; color:#fff; cursor:pointer; transition:0.3s; }
+#input-container button:hover { background:#0ff; color:#000; }
+
+/* Scrollbar */
+#chat-box::-webkit-scrollbar { width:8px; }
+#chat-box::-webkit-scrollbar-thumb { background:#00f; border-radius:5px; }
+
+/* Parallax / animation */
+#chat-box div { animation:fadeIn 0.5s ease; }
+@keyframes fadeIn { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
